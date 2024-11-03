@@ -30,14 +30,14 @@ variable "sg_tags" {
 
 variable "outbound_rules" {
   type = list
-  default = {
-    [
+  default = [
+    {
         from_port = 0
         to_port = 0
         protocol = "-1" #all protocols
         cidr_blocks = ["0.0.0.0/0"]
-    ]
-  }
+    }
+  ]
 }
 
 variable "ingress_rules" {
